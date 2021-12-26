@@ -1,7 +1,11 @@
-print("sup foos")
+from flask import Flask
 
-def func1():
-    print("running function")
+app = Flask(__name__)
 
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
 
-func1()
+@app.route("/test")
+def hello_test():
+    return "<h1>Testing PATH fools</h1>"
